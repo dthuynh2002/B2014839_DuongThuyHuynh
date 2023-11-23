@@ -1,0 +1,15 @@
+.avatar {
+    img {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+.info {
+    span {
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,148 @@
+header {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    background-color: #fff;
+
+    &>div {
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+.between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.center {
+    @extend .between;
+    justify-content: center;
+}
+
+.header {
+    @extend .between;
+
+    &-logo {
+        @extend .between;
+        gap: 15px;
+
+        .search {
+            position: relative;
+            max-width: 320px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            border: 2px solid black;
+            border-radius: 15px;
+            overflow: hidden;
+
+            input {
+                padding: 6px 15px;
+                flex: 1;
+                border: none;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                padding: 6px 10px 6px 0;
+                color:black;
+            }
+        }
+    }
+
+    .group-btn {
+        @extend .between;
+        gap: 10px;
+
+        .header-user {
+            --size: 40px;
+            width: var(--size);
+            height: var(--size);
+            border: 2px solid currentColor;
+            border-radius: 50%;
+            @extend .between;
+            justify-content: center;
+            color: black;
+        }
+
+        .btn-header {
+            padding: 4px 25px;
+            border: 2px solid currentColor;
+            font-size: 16px;
+            color: black;
+            font-weight: 600;
+            border-radius: 4px;
+            background-color: transparent;
+            transition: all 0.3s ease;
+
+            a,
+            a:hover {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            &:hover {
+                opacity: 0.85;
+            }
+        }
+
+        .btn-left {
+            background-color: black;
+            color: #fff;
+            border-color: black;
+        }
+
+        .cart {
+            @extend .center;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border: 2px solid currentColor;
+            color: black;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    }
+}
+
+.offcanvas {
+    height: 100vh;
+    overflow: hidden;
+
+    &-header {
+        height: 64px;
+    }
+
+    &-body {
+        position: relative;
+        height: calc(100vh - 164px);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    &-footer {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        height: 100px;
+
+        p {
+            padding-bottom: 10px;
+            color: black;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+    }
+}
