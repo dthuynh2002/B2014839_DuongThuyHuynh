@@ -42,7 +42,7 @@ export default {
 
 <template>
   <div class="row">
-    <h1 class="title text-center">
+    <h1 class="title text-center pt-3">
       KẾT QUẢ TÌM KIẾM ({{ searchKey }})
     </h1>
     <div class="row" v-if="hanghoa.value">

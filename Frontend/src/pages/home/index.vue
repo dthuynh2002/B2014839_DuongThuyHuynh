@@ -26,7 +26,35 @@ export default {
 
 <template>
   <div class="row">
-    <h1 class="title text-center">
+    <div class="slide-show">
+      <div id="carouselExampleInterval" class="carousel carousel-dark slide h-100" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100" data-bs-interval="3000">
+            <img src="../../assets/images/slide1.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item h-100" data-bs-interval="3000">
+            <img src="../../assets/images/slide2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item h-100" data-bs-interval="3000">
+            <img src="../../assets/images/slide3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <h1 class="title text-center pt-3">
       Tất cả sản phẩm
     </h1>
     <div class="row" v-if="hanghoa">
